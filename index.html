@@ -26,7 +26,27 @@ footer{text-align:center;padding:30px;background:#2b1b11;color:#eee;margin-top:5
 small{color:var(--muted)}
 </style>
 </head>
-<body><article class="card">
+<script>
+fetch("https://api.github.com/repos/fszalfazli29-dot/My-poems-/contents/")
+  .then(response => response.json())
+    .then(files => {
+        const poems = document.querySelector("#poems");
+            files
+                  .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file.name))
+                        .forEach(file => {
+                                if (document.querySelector(`img[src="${file.name}"]`)) return;
+                                
+                                        const article = document.createElement("article");
+                                                article.className = "card";
+                                                        article.innerHTML = `
+                                                                  <span class="tag">انځوریز شعر</span>
+                                                                            <h3>${file.name}</h3>
+                                                                                      <img src="${file.name}" alt="انځوریز شعر" style="width:100%;border-radius:12px;">
+                                                                                              `;
+                                                                                                      poems.appendChild(article);
+                                                                                                            });
+                                                                                                              });
+                                                                                                              </script><body><article class="card">
     <span class="tag">انځوریز شعر</span>
       <h3>زما شعر</h3>
         <img src="IMG-20260919-WA0000.jpg" alt="زما شعر" style="width:100%;border-radius:12px;">
