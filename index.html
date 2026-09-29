@@ -81,7 +81,26 @@
 
 </head>
 
-<body>
+<body><script>
+fetch('poems.json')
+  .then(response => response.json())
+  .then(poems => {
+    const container = document.createElement('div');
+    container.id = 'poems';
+
+    poems.forEach(poem => {
+      const article = document.createElement('article');
+      article.innerHTML = `
+        <h2>${poem.title}</h2>
+        <p style="white-space: pre-line;">${poem.text}</p>
+        <hr>
+      `;
+      container.appendChild(article);
+    });
+
+    document.body.appendChild(container);
+  });
+</script>
 
   <header>
     <h1>زما شعرونه</h1>
