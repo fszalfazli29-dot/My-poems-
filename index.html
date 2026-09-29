@@ -1,85 +1,216 @@
-<!doctype html>
+<!doctype html><!doctype html>
 <html lang="ps" dir="rtl">
-<head><meta name="google-site-verification" content="ZjhP7CTCV4ECrgw1_vQMgYjawuy2jEXTbyQ7-4BOOc4" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>زما لیکنې او شعرونه</title>
-<meta name="description" content="زما شخصي ویبپاڼه — شعرونه، لیکنې او ادبي مطالب">
-<style>
-:root{--bg:#f6f1e8;--card:#fffdf8;--ink:#222;--muted:#6d665d;--accent:#7b3f00;--line:#e5dacb}
-*{box-sizing:border-box} body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.9}
-header{background:linear-gradient(135deg,#3d2415,#8a4d19);color:white;padding:55px 20px;text-align:center}
-header h1{margin:0 0 8px;font-size:38px} header p{margin:0;opacity:.9}
-nav{position:sticky;top:0;background:#fffdf8;border-bottom:1px solid var(--line);z-index:5}
-nav .wrap{max-width:1050px;margin:auto;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px}
-nav a{color:var(--accent);text-decoration:none;padding:7px 14px;border-radius:20px}nav a:hover{background:#f0e5d7}
-main{max-width:1050px;margin:35px auto;padding:0 18px}
-.hero,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 5px 18px #00000008}
-.hero{text-align:center;margin-bottom:28px}.hero h2{margin-top:0;color:var(--accent)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.card h3{margin-top:0;color:var(--accent)}
-.poem{white-space:pre-line;font-size:19px}
-.tag{display:inline-block;background:#efe2d3;color:var(--accent);padding:3px 10px;border-radius:15px;font-size:13px}
-section{scroll-margin-top:75px;margin:35px 0}
-footer{text-align:center;padding:30px;background:#2b1b11;color:#eee;margin-top:50px}
-.btn{display:inline-block;background:var(--accent);color:white;padding:9px 18px;border-radius:10px;text-decoration:none;margin-top:8px}
-small{color:var(--muted)}
-</style>
+<head>
+
+  <meta name="google-site-verification" content="ZjhP7CTCV4ECrgw1_vQMgYjawuy2jEXTbyQ7-4BOOc4" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>زما شعرونه</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 17px;
+    }
+
+    .gallery {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .poem {
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+
+    .poem img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .loading {
+      text-align: center;
+      font-size: 20px;
+      padding: 40px;
+    }
+
+    .error {
+      text-align: center;
+      color: #b00020;
+      padding: 30px;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+      background: #222;
+      color: white;
+    }
+  </style>
+
 </head>
+
 <body>
-<header>
-  <h1>زما لیکنې او شعرونه</h1>
-  <p>زما د فکر، احساس او قلم نړۍ</p>
-</header>
 
-<nav><div class="wrap">
-<a href="#home">کور</a><a href="#poems">شعرونه</a><a href="#writings">لیکنې</a><a href="#about">زما په اړه</a><a href="#contact">اړیکه</a>
-</div></nav>
+  <header>
+    <h1>زما شعرونه</h1>
+    <p>زما انځوریز شعرونه</p>
+  </header>
 
-<main>
-<section id="home" class="hero">
-  <h2>ښه راغلاست!</h2>
-  <p>دا زما شخصي ادبي ویبپاڼه ده. دلته به خپل شعرونه، لیکنې او نور ادبي مطالب له تاسو سره شریکوم.</p>
-  <a class="btn" href="#poems">شعرونه ولولئ</a>
-</section>
+  <div id="gallery" class="gallery">
+    <div class="loading">شعرونه راښکاره کېږي...</div>
+  </div>
 
-<section id="poems">
-<h2>✍️ شعرونه</h2>
-<div class="grid">
-  <article class="card">
-    <span class="tag">شعر</span>
-    <h3>زما لومړی شعر</h3>
-    <div class="poem">دلته خپل شعر ولیکئ...
+  <footer>
+    © زما شعرونه
+  </footer>
 
-د شعر کرښې دلته اضافه کړئ.
-د خپلې خوښې په ډول یې تنظیم کړئ.</div>
-  </article>
-  <article class="card">
-    <span class="tag">شعر</span>
-    <h3>بل شعر</h3>
-    <div class="poem">دلته د دویم شعر متن ولیکئ...</div>
-  </article>
-</div>
-</section>
+  <script>
 
-<section id="writings">
-<h2>📖 لیکنې</h2>
-<div class="grid">
-  <article class="card"><h3>زما لومړۍ لیکنه</h3><small>د خپرېدو نېټه: ۲۰۲۶</small><p>دلته خپله لیکنه ولیکئ. تاسو کولای شئ د هرې لیکنې لپاره جلا کارت جوړ کړئ.</p></article>
-  <article class="card"><h3>یوه بله لیکنه</h3><small>د خپرېدو نېټه: ۲۰۲۶</small><p>دلته د خپلې بلې لیکنې لنډه برخه ولیکئ.</p></article>
-</div>
-</section>
+    const owner = "fszalfazli29-dot";
+    const repo = "My-poems-";
+    const branch = "main";
 
-<section id="about" class="card"> <h2>👤 زما په اړه</h2> <p><strong>فضل الرحمن فضلي</strong> د ملک محمد زوی، په ۱۳۷۳ هجري شمسي کال کې د بغلان ولایت د مرکزي بغلان ولسوالۍ د اهلي خواجه په کلي کې په یوه علمي، متدینه او مجاهده کورنۍ کې نړۍ ته سترګې پرانیستې.</p> <p>ښاغلي فضلي خپلې لومړنۍ زده کړې په پاکستان کې ترسره کړې او د لیسې دورې زده کړې یې د مرکزي بغلان د امام قطیبه عالي دارالعلوم کې بشپړې کړې. نوموړی په ۱۳۹۳ هجري شمسي کال کې له یاد دارالعلوم څخه د ټولګي د عمومي اول نمره په توګه فارغ شو.</p> <p>وروسته یې په ۱۳۹۴ هجري شمسي کال کې د ادارې او حسابدارۍ په انستیتوت کې د ادارې او مدیریت په څانګه کې نیمه‌عالي زده کړې پیل کړې او په ۱۳۹۵ هجري شمسي کال کې یې له یاد انستیتوت څخه په عالي درجه فراغت ترلاسه کړ. وروسته په ۱۳۹۸ کال کې د حکیم سنایي پوهنتون د اقتصاد پوهنځي د مالي او بانکدارۍ په څانګه کې شامل شو او د لیسانس دوره یې په ۱۴۰۱ کال کې په بریالیتوب بشپړه کړه.</p> <p>فضلي صاحب د خپلې مورنۍ ژبې پښتو ترڅنګ په دري، انګلیسي او اردو ژبو هم خبرې کولای شي.</p> <h3>📖 د شعر او شاعرۍ نړۍ</h3> <p>فضل الرحمن فضلي له ماشومتوبه له شعر او شاعرۍ سره ځانګړې مینه درلوده. نوموړي د رحمان بابا، حمزه بابا، خوشحال خان خټک، غني خان او نورو مشهورو شاعرانو شعرونه لوستل او زمزمه کول.</p> <p>فضلي صاحب په ۱۳۸۵ هجري شمسي کال کې په رسمي ډول شعر او شاعرۍ ته مخه کړه. تر دې دمه یې په سلګونو شعرونه لیکلي چې په بېلابېلو شعري قالبونو کې یې خپل احساسات او افکار انځور کړي دي. د نوموړي ډېری شعرونه د غزل په قالب کې دي او ګڼ شمېر شعرونه یې حماسي رنګ او بڼه لري.</p> <p>د وطن ناخوالو، بې‌عدالتیو او د خلکو له ستونزو سره مخامخ کېدو نوموړی دې ته وهڅاوه چې خپل احساسات د شعر په ژبه بیان کړي. همدا احساسات او د خپل وطن او خلکو سره مینه وه چې فضل الرحمن فضلي یې د شعر او شاعرۍ پر لور وهڅاوه.</p> <p><strong>دا ویبپاڼه د فضل الرحمن فضلي د شعرونو، ادبي هڅو او شاعرانه احساساتو د خپرولو لپاره جوړه شوې ده.</strong></p> </section> 
+    const gallery = document.getElementById("gallery");
 
-<section id="contact" class="card">
-<h2>📞 اړیکه</h2>
-<p>د اړیکې لپاره خپل ایمیل، فیسبوک یا بله ټولنیزه پاڼه دلته اضافه کړئ.</p>
-<p><strong>ایمیل:</strong> خپل ایمیل دلته ولیکئ</p>
-</section>
-</main>
+    async function getFiles(path = "") {
 
-<footer>© ۲۰۲۶ — زما لیکنې او شعرونه</footer>
-</body><img src="IMG-20260919-WA0000.jpg" alt="زما شعر"> 
+      const api =
+        "https://api.github.com/repos/" +
+        owner + "/" + repo +
+        "/contents/" + path +
+        "?ref=" + branch;
+
+      const response = await fetch(api);
+
+      if (!response.ok) {
+        throw new Error("GitHub files could not be loaded");
+      }
+
+      return await response.json();
+    }
+
+    async function findImages(path = "") {
+
+      const files = await getFiles(path);
+      let images = [];
+
+      for (const file of files) {
+
+        if (file.type === "file") {
+
+          const name = file.name.toLowerCase();
+
+          if (
+            name.endsWith(".jpg") ||
+            name.endsWith(".jpeg") ||
+            name.endsWith(".png") ||
+            name.endsWith(".webp")
+          ) {
+            images.push(file);
+          }
+
+        } else if (file.type === "dir") {
+
+          try {
+            const inside = await findImages(file.path);
+            images = images.concat(inside);
+          } catch (e) {
+            console.log("Folder skipped:", file.path);
+          }
+
+        }
+      }
+
+      return images;
+    }
+
+    async function showPoems() {
+
+      try {
+
+        const images = await findImages();
+
+        gallery.innerHTML = "";
+
+        if (images.length === 0) {
+          gallery.innerHTML =
+            '<div class="error">تر اوسه کوم انځور ونه موندل شو.</div>';
+          return;
+        }
+
+        images.forEach((image) => {
+
+          const box = document.createElement("div");
+          box.className = "poem";
+
+          const img = document.createElement("img");
+
+          img.src =
+            "https://raw.githubusercontent.com/" +
+            owner + "/" +
+            repo +
+            "/" +
+            branch +
+            "/" +
+            image.path
+              .split("/")
+              .map(part => encodeURIComponent(part))
+              .join("/");
+
+          img.alt = image.name;
+          img.loading = "lazy";
+
+          box.appendChild(img);
+          gallery.appendChild(box);
+
+        });
+
+      } catch (error) {
+
+        console.error(error);
+
+        gallery.innerHTML =
+          '<div class="error">د شعرونو د راوستلو پر مهال ستونزه پیدا شوه. لږ وروسته بیا پاڼه تازه کړئ.</div>';
+      }
+    }
+
+    showPoems();
+
+  </script>
+
+</body>
+</html>
 </html>
 
